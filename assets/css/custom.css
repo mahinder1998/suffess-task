@@ -1,0 +1,498 @@
+@font-face {
+    font-family: "Beton CG";
+    src: url("../fonts/BetonCGExtraBold.woff2") format("woff2"), url("../fonts/BetonCGExtraBold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans Condensed";
+    src: url("../fonts/OpenSans-CondensedBold.woff2") format("woff2"), url("../fonts/OpenSans-CondensedBold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans Condensed";
+    src: url("../fonts/OpenSans-CondensedLight.woff2") format("woff2"), url("../fonts/OpenSans-CondensedLight.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans Condensed";
+    src: url("../fonts/OpenSans-CondensedLightItalic.woff2") format("woff2"), url("../fonts/OpenSans-CondensedLightItalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Permanent Marker";
+    src: url("../fonts/PermanentMarker-Regular.woff2") format("woff2"), url("../fonts/PermanentMarker-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --fontOpen: "Open Sans Condensed";
+    --fontPermanent: "Permanent Marker";
+    --fontBeton: "Beton CG";
+    --colorPrimary: #1f1d1d;
+    --colorSecondary: #f47c27;
+}
+
+body {
+    font-family: "Open Sans Condensed";
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* header css start */
+.header-right .d-flex {
+    list-style: none;
+    gap: 30px;
+    max-width: 100%;
+    width: 165px;
+    padding-top: 20px;
+}
+.header-right .badge.badge-light {
+    position: absolute;
+    background: #f47c27;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -24px;
+    top: -4px;
+}
+
+/* banner css start */
+.banner-item {
+    position: relative;
+}
+.banner-conetnt {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 640px;
+    width: 100%;
+    text-align: center;
+    padding: 55px 0 0;
+}
+.banner-conetnt h1,
+.banner-conetnt h2 {
+    font-size: 53px;
+    line-height: 56px;
+    letter-spacing: 1%;
+    font-family: var(--fontBeton);
+    font-weight: 400;
+    color: var(--colorPrimary);
+    margin: 0;
+}
+.banner-conetnt h2 {
+    color: var(--colorSecondary);
+}
+.paragraph {
+    font-size: 22px;
+    line-height: 56px;
+    letter-spacing: 3px;
+    font-family: var(--fontPermanent);
+    margin: 0;
+}
+.paragraph-two {
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+.primary-btn {
+    background: var(--colorSecondary);
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 19px 30px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    min-width: 216px;
+    border-radius: 10px;
+    transition: background-color, box-shadow 0.5s;
+    box-shadow: 8px 8px 0 #000;
+}
+.primary-btn:hover {
+    background-color: var(--colorPrimary);
+    color: #fff;
+    box-shadow: unset;
+}
+
+.banner-main .slick-dots {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    gap: 30px;
+}
+
+.banner-main .slick-dots button {
+    width: 12px;
+    height: 12px;
+    border-radius: 100px;
+    font-size: 0;
+    display: inline-block;
+    padding: 0;
+    background: #000000;
+    border: none;
+}
+.banner-main .slick-dots .slick-active button {
+    position: relative;
+}
+
+.banner-main .slick-dots .slick-active button:after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.banner-image img {
+    width: 100%;
+}
+
+.banner {
+    position: relative;
+}
+.btn-wrap {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    gap: 2px;
+}
+.btn-wrap button {
+    width: 70px;
+    height: 70px;
+    background: var(--colorSecondary);
+    border: none;
+}
+.btn-wrap button:hover {
+    background-color: var(--colorPrimary);
+}
+
+/* why choose*/
+.why-choose {
+    background: url(../images/why-choose-bg.png) no-repeat center center;
+    background-size: cover;
+}
+
+.choose-list {
+    position: absolute;
+    right: 0;
+    top: 80px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.choose-list > li > a {
+    background: #f47c27;
+    color: #fff;
+    text-decoration: none;
+    width: 293px;
+    display: inline-block;
+    text-align: center;
+    font-size: 28px;
+    line-height: 38.13px;
+    font-weight: 700;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding: 17px;
+}
+.choose-image {
+    padding: 136px 10px 0;
+    height: 100%;
+}
+.choose-image img {
+    height: 100%;
+    object-fit: cover;
+}
+.choose-list > li > a {
+    margin-bottom: 15px;
+}
+.choose-list > li:last-child > a {
+    margin-bottom: 0;
+}
+
+.choose-content {
+    padding: 110px 0 140px;
+}
+
+.choose-content h2 {
+    font-size: 35px;
+    line-height: 56px;
+    color: #1f1d1d;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: var(--fontBeton);
+    margin-bottom: 14px;
+}
+
+.choose-content p {
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 700;
+}
+
+button.watch-video {
+    border: none;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 700;
+    background: transparent;
+    gap: 12px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-top: 65px;
+}
+
+.testimonial-section {
+    padding: 84px 0 60px;
+    overflow: hidden;
+}
+.testimonial-slider {
+    margin-right: -40%;
+}
+.testimonial-section h2 {
+    font-size: 35px;
+    font-weight: 400;
+    font-family: var(--fontBeton);
+    margin-bottom: 20px;
+}
+.rating.mb-3 {
+    margin-bottom: 36px !important;
+}
+.test-btn-wrap {
+    margin-top: 86px;
+    gap: 12px;
+    display: flex;
+}
+.testimonial-section .text-muted {
+    font-size: 33px;
+    line-height: 42px;
+    font-style: italic;
+}
+
+.testimonial-card {
+    background: #f6efea;
+    border-radius: 30px;
+    padding: 30px;
+}
+.test-btn-wrap button {
+    background: transparent;
+    border: none;
+}
+
+.testimonial-card {
+    margin-right: 15px;
+    margin-left: 15px;
+    position: relative;
+}
+.quote-icon {
+    position: absolute;
+    left: 20px;
+}
+.testimonial-card .profile img {
+    border-radius: 100%;
+    margin: 0 auto;
+}
+.testimonial-card h5 {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+    font-family: var(--fontBeton);
+    margin-top: 34px;
+}
+.rating {
+    margin-bottom: 20px;
+}
+.testimonial-card p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 700;
+}
+.author {
+    text-align: center;
+    padding: 30px 0 0;
+    color: #f47c27;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+    font-family: var(--fontPermanent);
+}
+
+.footer-links > * {
+    border-right: 1px solid #fff;
+    padding: 0 12px;
+}
+.footer-links > *:last-child {
+    border-right: none;
+}
+
+.footer-links > span:first-child {
+    padding-left: 0;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 50px;
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .banner-conetnt h1,
+    .banner-conetnt h2 {
+        font-size: 42px;
+        line-height: 44px;
+    }
+    .banner-conetnt {
+        padding-top: 30px;
+    }
+    .banner-main .slick-dots {
+        bottom: 30px;
+    }
+    .btn-wrap button {
+        width: 50px;
+        height: 50px;
+    }
+    .choose-list > li > a {
+        width: 150px;
+        font-size: 18px;
+    }
+    .choose-content h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .choose-image img {
+        height: auto;
+    }
+    .choose-content {
+        padding: 50px 0;
+    }
+    .primary-btn {
+        padding: 18px 20px;
+    }
+    .testimonial-section h2 {
+        font-size: 30px;
+    }
+    .testimonial-section .text-muted {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .test-btn-wrap button img {
+        width: 16px;
+    }
+}
+
+@media (max-width: 991px) {
+    .header-right .d-flex {
+        padding-left: 0;
+    }
+    .banner-conetnt h1,
+    .banner-conetnt h2 {
+        font-size: 38px;
+        line-height: 42px;
+    }
+    .primary-btn {
+        min-width: auto;
+        padding: 10px 30px;
+        font-size: 18px;
+    }
+    .banner-main .slick-dots {
+        bottom: 20px;
+    }
+    .banner-conetnt {
+        padding-top: 20px;
+    }
+    .btn-wrap button {
+        width: 40px;
+        height: 40px;
+    }
+    .footer-links > * {
+        font-size: 13px;
+    }
+    .mx-1 {
+        margin: 0 !important;
+        width: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .banner-conetnt {
+        position: relative;
+        padding: 30px 30px 60px;
+    }
+    .banner-conetnt h1,
+    .banner-conetnt h2 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .paragraph {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .banner-main .slick-dots {
+        bottom: 10px;
+    }
+    .choose-list {
+        position: unset !important;
+    }
+    .why-choose {
+        margin: 30px 0;
+    }
+    button.watch-video {
+        margin-top: 0;
+    }
+    .choose-image {
+        padding-top: 0;
+    }
+    .choose-list > li > a {
+        width: 100%;
+        border-radius: 30px;
+        padding: 10px;
+    }
+
+    .choose-list {
+        margin: 30px 15px 0;
+    }
+    .rating.mb-3 {
+        margin-bottom: 20px !important;
+    }
+    .test-btn-wrap {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    .test-btn-wrap button img {
+        width: 14px;
+    }
+    .quote-icon {
+        left: 9px;
+    }
+}
